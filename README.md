@@ -46,10 +46,5 @@
 
 #### Contact Info
 
-<a> href="https://vignette.wikia.nocookie.net/logopedia/images/7/7f/GmailIconFromOlderAndroid.png/revision/latest/scale-to-width-down/185?cb=20170312212902">
-
-<img src="mailto:linduxico@gmail.com" alt="Linkdin Link" 
-
-         width=150" height="70">
-
-</a>
+<a href="https://vignette.wikia.nocookie.net/logopedia/images/7/7f/GmailIconFromOlderAndroid.png/revision/latest/scale-to-width-down/185?cb=20170312212902">
+<img src="mailto:linduxico@gmail.com" alt="Linkdin Link" width=150" height="70"></a>
