@@ -3,7 +3,7 @@
 <h3 align="center">A Full Stack Developer </h3>
 
 <p align="center">
-<div>Programming Language</div>
+<h1>Programming Language</h1>
   <img src="https://seeklogo.com/images/T/typescript-logo-B29A3F462D-seeklogo.com.png" alt="typescript" width="40" height="40"/>
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/600px-Unofficial_JavaScript_logo_2.svg.png" alt="javascript" width="40" height="40"/>
   <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt="nodejs" width="40" height="40"/>
