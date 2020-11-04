@@ -23,26 +23,33 @@
 #### Currently studying:
 
 * Full Stack Development
-  * React Native
-  * Node.js
-  * HTML
-  * CSS
-  * Java
-  * Javascript
-  * Typescript
-  * Flutter
-  * Python (Machine Learning)
-  * Python (Django Api Rest)
+  + React Native
+  + Node.js
+  + HTML
+  + CSS
+  + Java
+  + Javascript
+  + Typescript
+  + Flutter
+  + Python (Machine Learning)
+  + Python (Django Api Rest)
 * Machine Learning
 * Deep Learning
 * Languages
   + English
 
 #### Plans for the year:
-- [ ] to be defined
-- [x] Create a great portfolio
-- [x] Have fun working on personal projects
+
+* [ ] to be defined
+* [x] Create a great portfolio
+* [x] Have fun working on personal projects
 
 #### Contact Info
-[![Linkedin Badge](https://img.shields.io/badge/-Bruna%20Monarin-blue?style=for-the-badge&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/bruna-de-paula-monarin/)](https://www.linkedin.com/in/bruna-de-paula-monarin/)
-[![Gmail Badge](https://img.shields.io/badge/-brunamonarin@gmail.com-c14438?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:brunamonarin@gmail.com)](mailto:linduxico@gmail.com)
+
+<a>
+href="https://vignette.wikia.nocookie.net/logopedia/images/7/7f/GmailIconFromOlderAndroid.png/revision/latest/scale-to-width-down/185?cb=20170312212902">
+
+<img src="mailto:linduxico@gmail.com" alt="Linkdin Link" 
+         width=150" height="70">
+
+</a>
