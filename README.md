@@ -11,6 +11,7 @@
   <img src="https://www.kindpng.com/picc/m/355-3557482_flutter-logo-png-transparent-png.png" alt="Flutter" width="40" height="40"/>
 <img src="https://tse4.mm.bing.net/th?id=OIP.dLQRjUReUmbA67NWhT_uVQHaHa&pid=Api&P=0&w=300&h=300" alt="java" width="40" height="40"/>
 <img src="https://tse3.mm.bing.net/th?id=OIP.neH7oLSss87jNaoQQIch4wAAAA&pid=Api&P=0&w=300&h=300" alt="Api" width="40" height="40"/>
+<img src="https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png" alt="react" width="45" height="40"/>
 </p>
 <p align="center">Interface's</p>
 <p align="center"><img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@00a000c7e5d8cc0d8416468e164eef281f843bff/icons/vscode.png" alt="VsCode" width="40" height="40"/>
@@ -18,18 +19,30 @@
 <img src="https://tse4.mm.bing.net/th?id=OIP.oKzaQU8S4g6lRQKKyAvNjAAAAA&pid=Api&P=0&w=300&h=300" alt="Ecplise" width="40" height="40"/>
 
 </p>
-<!--
-**FrancosCorporation/FrancosCorporation** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
+#### Currently studying:
 
-* 🔭 I’m currently working on ...
-* 🌱 I’m currently learning ...
-* 👯 I’m looking to collaborate on ...
-* 🤔 I’m looking for help with ...
-* 💬 Ask me about ...
-* 📫 How to reach me: ...
-* 😄 Pronouns: ...
-* ⚡ Fun fact: ...
+* Full Stack Development
+  * React Native
+  * Node.js
+  * HTML
+  * CSS
+  * Java
+  * Javascript
+  * Typescript
+  * Flutter
+  * Python (Machine Learning)
+  * Python (Django Api Rest)
+* Machine Learning
+* Deep Learning
+* Languages
+  + English
 
--->
+#### Plans for the year:
+- [ ] to be defined
+- [x] Create a great portfolio
+- [x] Have fun working on personal projects
+
+#### Contact Info
+[![Linkedin Badge](https://img.shields.io/badge/-Bruna%20Monarin-blue?style=for-the-badge&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/bruna-de-paula-monarin/)](https://www.linkedin.com/in/bruna-de-paula-monarin/)
+[![Gmail Badge](https://img.shields.io/badge/-brunamonarin@gmail.com-c14438?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:brunamonarin@gmail.com)](mailto:linduxico@gmail.com)
