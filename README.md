@@ -10,9 +10,9 @@
 </p>
 <p align="center"><img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@00a000c7e5d8cc0d8416468e164eef281f843bff/icons/vscode.png" alt="VsCode" width="40" height="40"/>
 <img src="https://www.kindpng.com/picc/m/355-3557482_flutter-logo-png-transparent-png.png" alt="Flutter" width="40" height="40"/>
-<img src="" alt="javascript" width="40" height="40"/>
-<img src="" alt="javascript" width="40" height="40"/>
-<img src="" alt="javascript" width="40" height="40"/>
+<img src="http://riaxe.com/wp-content/uploads/2013/images/java-development.png" alt="java" width="40" height="40"/>
+<img src="https://cdn.business2community.com/wp-content/uploads/2016/12/API-Security.png.png" alt="javascript" width="40" height="40"/>
+<img src="" alt="Api" width="40" height="40"/>
 <img src="" alt="javascript" width="40" height="40"/>
 </p>
 <!--
