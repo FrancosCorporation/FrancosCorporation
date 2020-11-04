@@ -9,7 +9,7 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/600px-Python-logo-notext.svg.png" alt="python" width="40" height="40"/>
 </p>
 <p align="center"><img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@00a000c7e5d8cc0d8416468e164eef281f843bff/icons/vscode.png" alt="VsCode" width="40" height="40"/>
-<img src="https://miro.medium.com/max/700/1*TkNd1PwwwdBi9Z3kdG5Hng.png" alt="Flutter" width="40" height="40"/>
+<img src="https://www.kindpng.com/picc/m/355-3557482_flutter-logo-png-transparent-png.png" alt="Flutter" width="40" height="40"/>
 <img src="" alt="javascript" width="40" height="40"/>
 <img src="" alt="javascript" width="40" height="40"/>
 <img src="" alt="javascript" width="40" height="40"/>
