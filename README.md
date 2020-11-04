@@ -47,4 +47,4 @@
 #### Contact Info
 
 <a href="mailto:linduxico@gmail.com">
-<img src="https://vignette.wikia.nocookie.net/logopedia/images/7/7f/GmailIconFromOlderAndroid.png/revision/latest/scale-to-width-down/185?cb=20170312212902" alt="Linkdin Link" width=150" height="70"></a>
+<img src="https://tse2.mm.bing.net/th?id=OIP.Sr7ytZEaSMBAO6F9pvEMpAHaHa&pid=Api&P=0&w=300&h=300" alt="linkedin Link" width=40" height="40"></a>
