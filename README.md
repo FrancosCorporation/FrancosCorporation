@@ -16,9 +16,13 @@
 <p align="center">Interface's</p>
 <p align="center"><img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@00a000c7e5d8cc0d8416468e164eef281f843bff/icons/vscode.png" alt="VsCode" width="40" height="40"/>
 <img src="https://tse1.mm.bing.net/th?id=OIP.8OYJYqaCkzrgt4XiNN5j3wHaHa&pid=Api&P=0&w=300&h=300" alt="Ecplise" width="40" height="40"/>
-<img src="https://tse4.mm.bing.net/th?id=OIP.oKzaQU8S4g6lRQKKyAvNjAAAAA&pid=Api&P=0&w=300&h=300" alt="Ecplise" width="40" height="40"/>
+<img src="https://notepad-plus-plus.org/images/logo.svg" alt="Notepad ++" width="40" height="40"/>
 
 </p>
+
+#### I'm organizing for here !!
+
+
 
 #### Currently studying:
 
