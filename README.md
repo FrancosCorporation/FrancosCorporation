@@ -47,7 +47,7 @@
 * [x] Get knowledge 
 * [x] Create a great portfolio
 * [x] Have fun working on personal projects
-
+* [ ] Get a new job in my área
 #### Contact Info
 
 <a href="mailto:rodolfofranco14@hotmail.com">
