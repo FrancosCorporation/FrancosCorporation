@@ -28,7 +28,7 @@
 
 * Full Stack Development
   + React Native
-  + c#
+  + C#
   + Node.js
   + HTML
   + CSS
