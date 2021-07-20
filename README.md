@@ -10,7 +10,7 @@
 
   <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" alt="nodejs" width="70" height="70"/>
 
-  <img src="https://github.com/FrancosCorporation/FrancosCorporation/blob/main/Icons/python.png" alt="python" width="70" height="70"/>
+  <img src="Icons/python.png" alt="python" width="70" height="70"/>
 
   <img src="https://www.kindpng.com/picc/m/355-3557482_flutter-logo-png-transparent-png.png" alt="Flutter" width="70" height="70"/>
 
