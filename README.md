@@ -11,7 +11,7 @@
   <img src="https://www.kindpng.com/picc/m/355-3557482_flutter-logo-png-transparent-png.png" alt="Flutter" width="70" height="70"/>
 <img src="https://tse4.mm.bing.net/th?id=OIP.dLQRjUReUmbA67NWhT_uVQHaHa&pid=Api&P=0&w=300&h=300" alt="java" width="70" height="70"/>
 <img src="https://tse3.mm.bing.net/th?id=OIP.neH7oLSss87jNaoQQIch4wAAAA&pid=Api&P=0&w=300&h=300" alt="Api" width="70" height="70"/>
-<img src="https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png" alt="react" width="45" height="70"/>
+<img src="https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png" alt="react" width="70" height="70"/>
 </p>
 <p align="center">Interface's</p>
 <p align="center"><img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@00a000c7e5d8cc0d8416468e164eef281f843bff/icons/vscode.png" alt="VsCode" width="70" height="70"/>
