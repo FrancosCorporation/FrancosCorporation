@@ -25,14 +25,14 @@
 
 <img src="Icons/java.png" alt="java" width="70" height="70"/>
 
-<img src="Icons/NET.png" alt=".net 5" width="70" height="70"/>
+<img src="Icons/net.png" alt=".net 5" width="70" height="70"/>
 
-<img src="Icons/React.png" alt="react" width="70" height="70"/>
+<img src="Icons/react.png" alt="react" width="70" height="70"/>
 </p>
 <p align="center">Interface's</p>
 <p align="center"><img src="Icons/vscode.png" alt="VsCode" width="70" height="70"/>
 
-<img src="Icons/Notepad++.png" alt="Notepad ++" width="70" height="70"/>
+<img src="Icons/notepad++.png" alt="Notepad ++" width="70" height="70"/>
 
 </p>
 
@@ -72,8 +72,8 @@
 #### Contact Info
 
 <a href="mailto:rodolfofranco14@hotmail.com">
-<img src="Icons/Email.png" alt="Hotmail Link" width="50" height="50"></a>
+<img src="Icons/email.png" alt="Hotmail Link" width="50" height="50"></a>
 <a href="https://api.whatsapp.com/send?phone=5562985835588">
-<img src="Icons/Whatsapp.png" alt="Whassap Link" width="50" height="50"></a>
+<img src="Icons/whatsapp.png" alt="Whassap Link" width="50" height="50"></a>
 <a href="https://www.linkedin.com/in/rodolfo-franco-26225549/">
 <img src="Icons/linkedin.png" alt="Linkedin Link" width="50" height="50"></a>
