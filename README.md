@@ -57,8 +57,8 @@
 #### Contact Info
 
 <a href="mailto:rodolfofranco14@hotmail.com">
-<img src="https://www.pittstate.edu/it/_files/images/1200px-microsoft_office_outlook_2018present.png" alt="Hotmail Link" width=70" height="70"></a>
+<img src="https://www.pittstate.edu/it/_files/images/1200px-microsoft_office_outlook_2018present.png" alt="Hotmail Link" width="50" height="50"></a>
 <a href="https://api.whatsapp.com/send?phone=5562985835588">
-<img src="https://tse2.mm.bing.net/th?id=OIP.Nf-m41NGgoClnltGcriroAHaHl&pid=Api&P=0&w=300&h=300" alt="Whassap Link" width=70" height="70"></a>
+<img src="https://tse2.mm.bing.net/th?id=OIP.Nf-m41NGgoClnltGcriroAHaHl&pid=Api&P=0&w=300&h=300" alt="Whassap Link" width="50" height="50"></a>
 <a href="https://www.linkedin.com/in/rodolfo-franco-26225549/">
-<img src="https://cdn.freebiesupply.com/logos/large/2x/linkedin-icon-logo-png-transparent.png" alt="Linkedin Link" width=70" height="70"></a>
+<img src="https://cdn.freebiesupply.com/logos/large/2x/linkedin-icon-logo-png-transparent.png" alt="Linkedin Link" width="50" height="50"></a>
