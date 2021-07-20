@@ -8,10 +8,7 @@
 
 <img src="Icons/javascript.png" alt="javascript" width="70" height="70"/>
 
-
 <img src="Icons/typescript.png" alt="typescript" width="70" height="70"/>
-
-
 
 <img src="Icons/c.png" alt="c#" width="60" height="60"/>
 
