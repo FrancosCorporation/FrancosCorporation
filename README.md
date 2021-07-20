@@ -28,6 +28,7 @@
 
 * Full Stack Development
   + React Native
+  + C#
   + Node.js
   + HTML
   + CSS
@@ -35,19 +36,24 @@
   + Javascript
   + Typescript
   + Flutter
-  + Python (Machine Learning)
-  + Python (Django Api Rest)
+  + Python
 * Machine Learning
+* Api Rest
+* Web Developer
+* Front-End
+* Back-End (especialist)
 * Deep Learning
 * Languages
   + English
+  + Portugues
+  + Español
 
 #### Plans for the year:
 
 * [x] Get knowledge 
 * [x] Create a great portfolio
 * [x] Have fun working on personal projects
-* [ ] Get a new job in my área
+* [ ] Get a new job with coder
 #### Contact Info
 
 <a href="mailto:rodolfofranco14@hotmail.com">
