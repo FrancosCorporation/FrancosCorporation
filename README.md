@@ -13,9 +13,9 @@
 
 
 
-<img src="Icons\c.png" alt="c#" width="60" height="60"/>
+<img src="Icons/c.png" alt="c#" width="60" height="60"/>
 
-<img src="Icons\dart.png" alt="dart" width="60" height="60"/>
+<img src="Icons/dart.png" alt="dart" width="60" height="60"/>
 
 <img src="Icons/node.png" alt="nodejs" width="70" height="70"/>
 
