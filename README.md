@@ -71,6 +71,6 @@
 <a href="mailto:rodolfofranco14@hotmail.com">
 <img src="Icons/email.png" alt="Hotmail Link" width="50" height="50"></a>
 <a href="https://api.whatsapp.com/send?phone=5562985835588">
-<img src="Icons/whatsapp.png" alt="Whassap Link" width="50" height="50"></a>
+<img src="Icons/whatsApp.png" alt="Whassap Link" width="50" height="50"></a>
 <a href="https://www.linkedin.com/in/rodolfo-franco-26225549/">
 <img src="Icons/linkedin.png" alt="Linkedin Link" width="50" height="50"></a>
