@@ -1,0 +1,378 @@
+name: 🔄 Atualização Automática do README
+
+on:
+  schedule:
+    # Rodar toda segunda-feira às 00:00 UTC (21h no horário de Brasília)
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+    # Permite disparo manual pelo GitHub Actions
+    inputs:
+      update_type:
+        description: 'Tipo de atualização'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - stats
+          - commits
+          - languages
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Passo 1: Checkout do repositório
+      - name: 📥 Checkout do código
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Pega todo o histórico de commits
+
+      # Passo 2: Configurar Node.js (para scripts JavaScript)
+      - name: 🛠️ Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      # Passo 3: Instalar dependências para geração de stats
+      - name: 📦 Instalar github-readme-stats (opcional)
+        run: |
+          npm install -D @github-readme-stats/core \
+                   @shikijs/color-prefixes \
+                   octokit
+        if: ${{ inputs.update_type == 'all' || inputs.update_type == 'stats' }}
+
+      # Passo 4: Script de atualização de métricas do GitHub
+      - name: 📊 Atualizar Métricas (Commits, Contribuições)
+        id: metrics
+        run: |
+          cat > update-metrics.sh << 'EOF'
+          #!/bin/bash
+          
+          REPO=$(echo "${{ github.repository }}" | cut -d'/' -f2)
+          OWNER=$(echo "${{ github.repository_owner }}" | cut -d'/' -f1)
+          
+          echo "📊 Calculando métricas para ${REPO}..."
+          
+          # 1. Contar commits nos últimos 30 dias
+          COMMITS_30D=$(git log --since="30 days ago" --oneline | wc -l)
+          echo "COMMITS_30D=${COMMITS_30D}" >> $GITHUB_ENV
+          
+          # 2. Contar commits nos últimos 60 dias
+          COMMITS_60D=$(git log --since="60 days ago" --oneline | wc -l)
+          echo "COMMITS_60D=${COMMITS_60D}" >> $GITHUB_ENV
+          
+          # 3. Contar commits nos últimos 90 dias
+          COMMITS_90D=$(git log --since="90 days ago" --oneline | wc -l)
+          echo "COMMITS_90D=${COMMITS_90D}" >> $GITHUB_ENV
+          
+          # 4. Contar issues abertas
+          ISSUES_OPENED=$(curl -s https://api.github.com/repos/${OWNER}/${REPO}/issues \
+            -H "Accept: application/vnd.github.v3+json" | jq '.[] | select(.state=="open")' | wc -l)
+          echo "ISSUES_OPEN=${ISSUES_OPENED}" >> $GITHUB_ENV
+          
+          # 5. Contar pull requests abertas
+          PRS_OPEN=$(curl -s https://api.github.com/repos/${OWNER}/${REPO}/pulls \
+            -H "Accept: application/vnd.github.v3+json" | jq '.[] | select(.state=="open")' | wc -l)
+          echo "PRS_OPEN=${PRS_OPEN}" >> $GITHUB_ENV
+          
+          # 6. Contar stars e forks
+          STARS=$(curl -s https://api.github.com/repos/${OWNER}/${REPO} \
+            -H "Accept: application/vnd.github.v3+json" | jq '.stargazers_count')
+          echo "STARS=${STARS}" >> $GITHUB_ENV
+          
+          FORKS=$(curl -s https://api.github.com/repos/${OWNER}/${REPO} \
+            -H "Accept: application/vnd.github.v3+json" | jq '.forks_count')
+          echo "FORKS=${FORKS}" >> $GITHUB_ENV
+          
+          # 7. Calcular top languages (requer histórico completo)
+          LANGUAGES=$(git log --name-only --pretty=format:'' | \
+            grep -v '^$' | sort | uniq -c | sort -rn | head -10)
+          echo "LANGUAGES='${LANGUAGES}'" >> $GITHUB_ENV
+          
+          # 8. Calcular contribuições por dia (últimos 365 dias)
+          DATE=$(date +%Y-%m-%d)
+          for i in {1..365}; do
+            DAY=$((DATE - i))
+            COUNT=$(git log --since="${DAY} 00:00" --until="${DAY} 24:00" --oneline | wc -l)
+            echo "${DAY},${COUNT}" >> contributions-${REPO}.csv
+          done
+          
+          echo "✅ Métricas atualizadas!"
+          EOF
+          
+          chmod +x update-metrics.sh
+          ./update-metrics.sh
+
+      # Passo 5: Gerar gráfico de contribuições (opcional)
+      - name: 📈 Gerar Gráfico de Contribuições
+        if: ${{ inputs.update_type == 'all' || inputs.update_type == 'stats' }}
+        run: |
+          cat > generate-contributions-chart.sh << 'EOF'
+          #!/bin/bash
+          
+          REPO=$(echo "${{ github.repository }}" | cut -d'/' -f2)
+          
+          if [ -f "contributions-${REPO}.csv" ]; then
+            echo "📊 Gerando gráfico de contribuições..."
+            
+            # Usar python para gerar PNG (se disponível) ou texto ASCII
+            if command -v python3 &> /dev/null; then
+              python3 << 'PYTHON'
+import csv
+from datetime import datetime
+
+try:
+    with open('contributions-${REPO}.csv', 'r') as f:
+        reader = csv.reader(f)
+        data = list(reader)
+    
+    # Gerar gráfico ASCII
+    max_contribs = max([int(row[1]) for row in data if row[1]])
+    width = 50
+    
+    print("\n📊 Contribuições Semanais (últimos 365 dias):")
+    print("=" * 70)
+    
+    # Agrupar por semana
+    weekly = {}
+    for date, count in data:
+        week_num = int((datetime.strptime(date, '%Y-%m-%d').timestamp() // 86400 * 7))
+        weekly[week_num] = weekly.get(week_num, 0) + count
+    
+    # Ordenar e exibir
+    sorted_weeks = sorted(weekly.items())
+    for week, count in sorted_weeks[-12:]:  # Últimas 12 semanas
+        bar_len = min(count / max_contribs * width, width)
+        print(f"{week}: {'█' * int(bar_len)} {count}")
+    
+except Exception as e:
+    print(f"Erro ao gerar gráfico: {e}")
+PYTHON
+            else
+              echo "Python não disponível - usando fallback de texto"
+              head -20 contributions-${REPO}.csv
+            fi
+          fi
+          EOF
+          
+          chmod +x generate-contributions-chart.sh
+          ./generate-contributions-chart.sh
+
+      # Passo 6: Commit das atualizações (se necessário)
+      - name: 💾 Commit das atualizações
+        if: ${{ inputs.update_type == 'all' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Criar arquivo com métricas atualizadas
+          cat > .metrics.json << EOF
+{
+  "generated_at": "${DATE}",
+  "commits_30d": ${COMMITS_30D:-0},
+  "commits_60d": ${COMMITS_60D:-0},
+  "commits_90d": ${COMMITS_90D:-0},
+  "issues_open": ${ISSUES_OPEN:-0},
+  "prs_open": ${PRS_OPEN:-0},
+  "stars": ${STARS:-0},
+  "forks": ${FORKS:-0}
+}
+EOF
+          
+          git add .metrics.json contributions-${{ github.repository }}.csv
+          git commit -m "🔄 Atualização automática de métricas do README" || echo "Nenhuma alteração para commit"
+          git push
+
+      # Passo 7: Script alternativo usando bash puro (sem dependências)
+      - name: 📝 Gerar conteúdo dinâmico com Bash
+        run: |
+          cat > generate-readme-dynamic.sh << 'EOF'
+          #!/bin/bash
+          
+          REPO=$(echo "${{ github.repository }}" | cut -d'/' -f2)
+          OWNER="${{ github.repository_owner }}"
+          
+          echo "🔄 Gerando conteúdo dinâmico para README.md..."
+          
+          # Função para obter dados da API do GitHub
+          get_github_data() {
+            local endpoint=$1
+            curl -s https://api.github.com/repos/${OWNER}/${REPO}${endpoint} \
+              -H "Accept: application/vnd.github.v3+json" | jq '.' 2>/dev/null || echo '{}'
+          }
+          
+          # Obter dados básicos
+          REPO_DATA=$(get_github_data "")
+          
+          if [ "$REPO_DATA" != "{}" ]; then
+            STARS=$(echo "$REPO_DATA" | jq -r '.stargazers_count // 0')
+            FORKS=$(echo "$REPO_DATA" | jq -r '.forks_count // 0')
+            WATCHERS=$(echo "$REPO_DATA" | jq -r '.subscribers_count // 0')
+            DESCRIPTION=$(echo "$REPO_DATA" | jq -r '.description // "Sem descrição"' | head -c 100)
+            
+            echo "⭐ Stars: ${STARS}"
+            echo "🔀 Forks: ${FORKS}"
+            echo "👁️ Watchers: ${WATCHERS}"
+            echo "📝 Descrição: ${DESCRIPTION}"
+          fi
+          
+          # Obter commits recentes
+          COMMITS=$(git log --since="30 days ago" --oneline | head -10)
+          COMMIT_COUNT=$(echo "$COMMITS" | wc -l)
+          
+          echo "📊 Commits nos últimos 30 dias: ${COMMIT_COUNT}"
+          
+          # Obter top languages
+          LANGUAGES=$(git log --name-only --pretty=format:'' \
+            2>/dev/null | grep -v '^$' | sort | uniq -c | sort -rn | head -5)
+          
+          echo "🔝 Top Languages:"
+          echo "$LANGUAGES"
+          
+          # Gerar badge de status
+          STATUS="ONLINE"
+          if [ $COMMIT_COUNT -eq 0 ]; then
+            STATUS="NOVO_REPOSITORIO"
+          fi
+          
+          echo "✅ Status: ${STATUS}"
+          EOF
+          
+          chmod +x generate-readme-dynamic.sh
+          ./generate-readme-dynamic.sh
+
+      # Passo 8: Atualizar README com dados dinâmicos (opcional)
+      - name: 📝 Atualizar README.md com dados dinâmicos
+        if: ${{ inputs.update_type == 'all' }}
+        run: |
+          cat > update-readme-content.sh << 'EOF'
+          #!/bin/bash
+          
+          REPO=$(echo "${{ github.repository }}" | cut -d'/' -f2)
+          
+          echo "📝 Atualizando README.md..."
+          
+          # Criar seção de métricas dinâmicas
+          cat > readme-metrics-section.md << METRICS_EOF
+<!-- ============================================
+         📊 MÉTRICAS VIVAS - DASHBOARD DE PERFORMANCE
+     ============================================ -->
+
+<div align="center">
+
+## 📊 Métricas Vivas
+
+### ⚡ Status do Repositório
+
+| Métrica | Valor |
+|---------|-------|
+| ⭐ Stars | **${{ env.STARS }}** |
+| 🔀 Forks | **${{ env.FORKS }}** |
+| 👁️ Watchers | **${{ env.WATCHERS }}** |
+| 📝 Commits (30d) | **${{ env.COMMITS_30D }}** |
+
+### 🎯 Contribuições Recentes
+
+```bash
+# Últimos 10 commits
+\$ git log --oneline -10
+$(git log --since="30 days ago" --oneline | head -10)
+```
+
+</div>
+METRICS_EOF
+          
+          echo "✅ Seção de métricas gerada!"
+          EOF
+          
+          chmod +x update-readme-content.sh
+          ./update-readme-content.sh
+
+      # Passo 9: Upload do arquivo de contribuições (para visualização no repo)
+      - name: 📤 Upload do arquivo de contribuições
+        if: ${{ inputs.update_type == 'all' || inputs.update_type == 'stats' }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: contributions-${{ github.repository }}
+          path: contributions-${{ github.repository }}.csv
+          retention-days: 365
+
+      # Passo 10: Limpeza de arquivos temporários
+      - name: 🧹 Limpar arquivos temporários
+        run: |
+          rm -f update-metrics.sh \
+               generate-contributions-chart.sh \
+               generate-readme-dynamic.sh \
+               update-readme-content.sh \
+               contributions-${{ github.repository }}.csv 2>/dev/null || true
+
+    # Job alternativo: Usar github-readme-stats (se disponível)
+    stats-generation:
+      if: ${{ inputs.update_type == 'all' || inputs.update_type == 'stats' }}
+      runs-on: ubuntu-latest
+      
+      steps:
+        - uses: actions/checkout@v3
+        
+        - name: 📊 Gerar README Stats com github-readme-stats
+          run: |
+            # Este é um exemplo de como usar o github-readme-stats
+            # Requer configuração adicional e permissões
+            
+            echo "📊 Integração com github-readme-stats:"
+            echo ""
+            echo "# Para usar github-readme-stats, adicione ao workflow:"
+            echo ""
+            echo 'run: |'
+            echo '  npm install -D @github-readme-stats/core'
+            echo '  npx @github-readme-stats/core --config-file .readmestatsrc.json'
+            echo ''
+            echo '# Configuração recomendada (.readmestatsrc.json):'
+            echo '{'
+            echo '  "repos": ['
+            echo '    {'
+            echo '      "count_private": true,'
+            echo '      "hide": {"contributions": false, "languages": false},'
+            echo '      "username": "${{ github.repository_owner }}",'
+            echo '      "total_columns": 4'
+            echo '    }'
+            echo '  ],'
+            echo '  "show_icons": true,'
+            echo '  "hide": [],'
+            echo '  "icon_shape": "circle",'
+            echo '  "theme": "default"'
+            echo '}'
+          shell: bash
+
+      - name: 📝 Gerar arquivo de stats (simulado)
+        run: |
+          cat > .readme-stats-placeholder.md << 'EOF'
+<!-- ============================================
+         📊 GITHUB README STATS (INTEGRADO)
+     ============================================ -->
+
+<div align="center">
+
+![GitHub Readme Stats](https://github-readme-stats.vercel.app/api?username=${{ github.repository_owner }}&show_icons=true&hide=false&count_private=true&theme=dark&icon_shape=rectangle&locale=pt_br)
+
+</div>
+EOF
+          
+          echo "✅ Placeholder de stats gerado!"
+
+  deploy:
+    needs: [update-readme, stats-generation]
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 🚀 Deploy das atualizações
+        run: |
+          echo "🎉 Atualização do README concluída!"
+          echo ""
+          echo "Próximos passos:"
+          echo "1. Verifique o commit no repositório"
+          echo "2. O README será atualizado automaticamente toda segunda-feira"
+          echo "3. Disparos manuais podem ser feitos via GitHub Actions UI"

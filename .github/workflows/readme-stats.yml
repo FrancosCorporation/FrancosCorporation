@@ -1,0 +1,104 @@
+name: 📊 GitHub Readme Stats Generator
+
+on:
+  schedule:
+    # Rodar toda segunda-feira às 00:00 UTC (21h no horário de Brasília)
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+    inputs:
+      regenerate:
+        description: 'Regenerar stats do README'
+        required: false
+        default: 'true'
+        type: boolean
+
+jobs:
+  generate-stats:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Passo 1: Checkout do repositório
+      - name: 📥 Checkout do código
+        uses: actions/checkout@v3
+        
+      # Passo 2: Configurar Node.js
+      - name: 🛠️ Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      # Passo 3: Instalar github-readme-stats
+      - name: 📦 Instalar dependências do stats
+        run: |
+          npm install -D @github-readme-stats/core \
+                       @shikijs/color-prefixes \
+                       octokit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      # Passo 4: Criar configuração do README Stats
+      - name: ⚙️ Configurar .readmestatsrc.json
+        run: |
+          cat > .readmestatsrc.json << 'EOF'
+{
+  "repos": [
+    {
+      "count_private": true,
+      "hide": {
+        "contributions": false,
+        "languages": false,
+        "sponsors": false,
+        "productivity": false
+      },
+      "username": "${{ github.repository_owner }}",
+      "total_columns": 4
+    }
+  ],
+  "show_icons": true,
+  "hide": [],
+  "icon_shape": "circle",
+  "theme": "default",
+  "locale": "pt_br"
+}
+EOF
+          
+          echo "✅ Configuração .readmestatsrc.json criada!"
+          
+      # Passo 5: Gerar stats do README
+      - name: 📊 Gerar README Stats
+        run: |
+          npx @github-readme-stats/core --config-file .readmestatsrc.json \
+            --output-format markdown \
+            >> README.md || echo "⚠️ github-readme-stats não disponível, usando fallback"
+          
+      # Passo 6: Criar placeholder visual (se stats falhar)
+      - name: 🎨 Criar placeholder de stats
+        run: |
+          cat > .github/readme-stats-placeholder.md << 'EOF'
+<!-- ============================================
+         📊 GITHUB README STATS (INTEGRADO AUTOMATICAMENTE)
+     ============================================ -->
+
+<div align="center">
+
+![GitHub Readme Stats](https://github-readme-stats.vercel.app/api?username=${{ github.repository_owner }}&show_icons=true&hide=false&count_private=true&theme=dark&icon_shape=rectangle&locale=pt_br)
+
+</div>
+EOF
+          
+          echo "✅ Placeholder de stats criado!"
+          
+      # Passo 7: Commit das atualizações
+      - name: 💾 Commit das atualizações do README
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Verificar se há alterações no README
+          if git diff --quiet; then
+            echo "ℹ️ Nenhum conteúdo novo para commit"
+          else
+            git add .readmestatsrc.json .github/readme-stats-placeholder.md
+            git commit -m "📊 Atualização automática de GitHub Readme Stats" || true
+            git push 2>/dev/null || echo "⚠️ Push falhou (verifique permissões)"
+          fi
