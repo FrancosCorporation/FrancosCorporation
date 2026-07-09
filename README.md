@@ -1,34 +1,76 @@
 <!-- ============================================
-     🎮 FRANCOS CORPORATION - PORTFÓLIO GAMIFICADO
+     🎮 FRANCOS CORPORATION - TERMINAL DE CORP
      ============================================ -->
 
 <div align="center">
 
-# 👨‍💻 Hey, everyone! 😎 I'm Rodolfo
+# ⚡ FRANCOS CORPORATION // SYSTEM ONLINE
 
-### 🚀 Full Stack Developer | System Architect | Tech Enthusiast
+## 🖥️ Terminal de Corporação v2.0
+
+> *"Code is poetry. Commit to excellence."*
 
 </div>
 
 <!-- ============================================
-         📊 GITHUB README STATS (INTEGRADO)
-     ============================================ -->
+       📡 STATUS DO SISTEMA - LIVE FEED
+   ============================================ -->
 
 <div align="center">
 
-![GitHub Readme Stats](https://github-readme-stats.vercel.app/api?username=rodolfo-franco&show_icons=true&count_private=true&theme=dark&icon_shape=rectangle&locale=pt_br)
+## 📡 Status do Sistema
+
+| Componente | Status | Detalhes |
+|------------|--------|----------|
+| **Servidor Principal** | `ONLINE` 🟢 | Sistema Operacional |
+| **API Gateway** | `ONLINE` ✅ | https://francoscorporation.ddns.net/api/status |
+| **GitHub Actions** | `ACTIVE` 🟢 | Workflow rodando automaticamente |
+| **Repositório** | `PUBLIC` 🔓 | {{ github.repository }} |
+
+```bash
+# Status do Sistema
+$ export SYSTEM_STATUS="ONLINE"🟢
+$ export API_URL="https://francoscorporation.ddns.net"
+$ export REPO="${OWNER}/${REPO}"
+✅ Sistema Operacional - Todos os serviços ativos
+```
 
 </div>
 
 <!-- ============================================
-         📡 SISTEMA DE NAVEGAÇÃO INTERATIVO
-     ============================================ -->
+       🎯 TYPING EFFECT - SAUDAÇÃO PERSONALIZADA
+   ============================================ -->
+
+<div align="center">
+
+## 👨‍💻 Bem-vindo ao Terminal de Corporação
+
+### ⚡ Typing Effect: Saudação do Sistema
+
+```bash
+$ export WELCOME_MESSAGE="👋 Olá, viajante! Bem-vindo à FRANCOS CORPORATION."
+$ export ROLE="Full Stack Developer | System Architect"
+$ export LOCATION="🌍 Online - Disponível para missões"
+$ export STATUS="ONLINE"🟢
+
+> {{ WELCOME_MESSAGE }}
+> 
+> 🎯 Especialidade: {{ ROLE }}
+> 📍 Localização: {{ LOCATION }}
+> ⚡ Status do Sistema: ONLINE🟢
+```
+
+</div>
+
+<!-- ============================================
+       🧭 MENU DE NAVEGAÇÃO INTERATIVO
+   ============================================ -->
 
 <div align="center">
 
 ---
 
-## 🧭 MENU PRINCIPAL - SELECIONE UMA MISSÃO
+## 🧭 **MENU PRINCIPAL - SELECIONE UMA MISSÃO**
 
 | 🎯 **Sobre Mim** | 💼 **Projetos** | 🛠️ **Stack** | 📈 **Stats** | 🔗 **Contato** |
 |:----------------:|:---------------:|:------------:|:-----------:|:--------------:|
@@ -39,14 +81,14 @@
 </div>
 
 <!-- ============================================
-          🎯 SOBRE MIM - STATUS DO JOGADOR
-     ============================================ -->
+       🎯 SOBRE MIM - STATUS DO JOGADOR
+   ============================================ -->
 
 <div align="center">
 
 ## 🎯 Sobre Mim
 
-### ⚡ Status Atual: `ONLINE` ✅
+### ⚡ Status Atual: `ONLINE` 🟢 ✅
 
 ```
 ╔══════════════════════════════════════════════════════════╗
@@ -79,8 +121,8 @@
 </div>
 
 <!-- ============================================
-         💻 TECNOLOGIAS - ARSENAL DO JOGADOR
-     ============================================ -->
+       💻 TECNOLOGIAS - ARSENAL DO JOGADOR
+   ============================================ -->
 
 <div align="center">
 
@@ -140,8 +182,8 @@ $ export FRONTEND="React, Flutter"
 </div>
 
 <!-- ============================================
-        🔧 PROJETOS - MISSÕES COMPLETADAS
-     ============================================ -->
+       🔧 PROJETOS - MISSÕES COMPLETADAS
+   ============================================ -->
 
 <div align="center">
 
@@ -170,11 +212,20 @@ $ export FRONTEND="React, Flutter"
 
 <!-- ============================================
        📊 MÉTRICAS VIVAS - DASHBOARD DE PERFORMANCE
-     ============================================ -->
+   ============================================ -->
 
 <div align="center">
 
 ## 📊 Métricas Vivas
+
+### ⚡ Status do Repositório
+
+| Métrica | Valor |
+|---------|-------|
+| ⭐ Stars | **0** |
+| 🔀 Forks | **0** |
+| 👁️ Watchers | **1** |
+| 📝 Commits (30d) | **1** |
 
 ### 🎯 Objetivos Anuais
 
@@ -197,10 +248,10 @@ $ export FRONTEND="React, Flutter"
 
 | Métrica | Valor | Status |
 |---------|-------|--------|
-| ⭐ Stars | **Ver no GitHub** | Atualizado semanalmente |
-| 🔀 Forks | **Ver no GitHub** | Atualizado semanalmente |
-| 👁️ Watchers | **Ver no GitHub** | Atualizado semanalmente |
-| 📝 Commits (30d) | **Ver no GitHub** | Atualizado diariamente |
+| ⭐ Stars | **0** | Atualizado diariamente |
+| 🔀 Forks | **0** | Atualizado diariamente |
+| 👁️ Watchers | **1** | Atualizado diariamente |
+| 📝 Commits (30d) | **1** | Atualizado diariamente |
 
 ### 🔄 Atualização Automática
 
@@ -209,12 +260,13 @@ Este README é alimentado por:
 - ✅ GitHub Actions (workflow de atualização)
 - ✅ github-readme-stats (stats visuais)
 - ✅ Scripts personalizados de automação
+- ✅ API do Servidor (https://francoscorporation.ddns.net)
 
 </div>
 
 <!-- ============================================
-         📬 CONTATO RÁPIDO - CANAIS DE COMUNICAÇÃO
-     ============================================ -->
+       📬 CONTATO RÁPIDO - CANAIS DE COMUNICAÇÃO
+   ============================================ -->
 
 <div align="center">
 
@@ -255,8 +307,8 @@ $ https://www.linkedin.com/in/rodolfo-franco-26225549/
 </div>
 
 <!-- ============================================
-         🛠️ COMO CONTRIBUIR - COLABORADORES
-     ============================================ -->
+       🛠️ COMO CONTRIBUIR - COLABORADORES
+   ============================================ -->
 
 <div align="center">
 
@@ -282,8 +334,8 @@ Se este projeto te ajudou, considere:
 </div>
 
 <!-- ============================================
-          📜 LICENÇA E RODAPÉ
-     ============================================ -->
+       📜 LICENÇA E RODAPÉ
+   ============================================ -->
 
 <div align="center">
 
@@ -312,8 +364,8 @@ copies of the Software.
 </div>
 
 <!-- ============================================
-         🔧 CONFIGURAÇÕES DE AUTOMAÇÃO
-     ============================================ -->
+       🔧 CONFIGURAÇÕES DE AUTOMAÇÃO
+   ============================================ -->
 
 <div align="center" style="opacity: 0.7; font-size: 12px;">
 
@@ -322,6 +374,7 @@ copies of the Software.
 - GitHub Actions (workflow de atualização)
 - github-readme-stats (opcional)
 - Scripts personalizados de automação
+- API do Servidor (https://francoscorporation.ddns.net)
 
 **Workflows disponíveis:**
 - [`update-readme.yml`](.github/workflows/update-readme.yml) - Atualiza métricas e commits
@@ -333,3 +386,5 @@ copies of the Software.
 - [`.github/USO-README.md`](.github/USO-README.md) - Guia completo de uso
 
 </div>
+
+EOF
