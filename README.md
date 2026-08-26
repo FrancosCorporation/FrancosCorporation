@@ -388,3 +388,9 @@ copies of the Software.
 </div>
 
 EOF
+
+
+"dream-coder-q8:latest",
+    "hf.co/meshllm/Llama-4-Scout-17B-16E-Instruct-UD-Q4_K_XL-layers:latest",
+    "bartowski-qwen2.5-7b:latest",
+    "hf.co/sillykiwi/Aroow-Rust-Coder-9B-Q4_K_S-GGUF:latest",
