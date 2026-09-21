@@ -108,9 +108,9 @@ Trabalho atual em plataforma própria da empresa, mantido em repositórios priva
 
 <div align="center">
 
-![Stats](https://github-readme-stats.vercel.app/api?username=FrancosCorporation&show_icons=true&count_private=true&locale=pt-br&theme=dark&hide_border=true)
+![Resumo](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=FrancosCorporation&theme=github_dark)
 
-![Linguagens](https://github-readme-stats.vercel.app/api/top-langs/?username=FrancosCorporation&layout=compact&count_private=true&locale=pt-br&theme=dark&hide_border=true)
+![Linguagens](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=FrancosCorporation&theme=github_dark)
 
 ![Streak](https://streak-stats.demolab.com?user=FrancosCorporation&theme=dark&hide_border=true&locale=pt-br)
 
