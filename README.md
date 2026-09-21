@@ -1,335 +1,138 @@
-<!-- ============================================
-     🎮 FRANCOS CORPORATION - PORTFÓLIO GAMIFICADO
-     ============================================ -->
-
 <div align="center">
 
-# 👨‍💻 Hey, everyone! 😎 I'm Rodolfo
+# Rodolfo Franco
 
-### 🚀 Full Stack Developer | System Architect | Tech Enthusiast
+### Desenvolvedor Full Stack
+
+**Python · Rust · TypeScript · C# · Java**
+
+Construo software de ponta a ponta: de ferramentas de sistema para Linux a APIs,
+bots, pipelines de IA e aplicações web.
+
+`Aberto a oportunidades` — remoto ou Goiânia/GO, Brasil
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-rodolfo--franco-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rodolfo-franco-26225549/)
+[![E-mail](https://img.shields.io/badge/E--mail-rodolfofranco14-0078D4?style=for-the-badge&logo=maildotru&logoColor=white)](mailto:rodolfofranco14@hotmail.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-%2B55\_62\_98585--5588-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://api.whatsapp.com/send?phone=5562985835588)
 
 </div>
-
-<!-- ============================================
-         📊 GITHUB README STATS (INTEGRADO)
-     ============================================ -->
-
-<div align="center">
-
-![GitHub Readme Stats](https://github-readme-stats.vercel.app/api?username=rodolfo-franco&show_icons=true&count_private=true&theme=dark&icon_shape=rectangle&locale=pt_br)
-
-</div>
-
-<!-- ============================================
-         📡 SISTEMA DE NAVEGAÇÃO INTERATIVO
-     ============================================ -->
-
-<div align="center">
 
 ---
 
-## 🧭 MENU PRINCIPAL - SELECIONE UMA MISSÃO
+## Sobre
 
-| 🎯 **Sobre Mim** | 💼 **Projetos** | 🛠️ **Stack** | 📈 **Stats** | 🔗 **Contato** |
-|:----------------:|:---------------:|:------------:|:-----------:|:--------------:|
-| [`👤 Sobre`](#-sobre-mim) | [`🔧 Projetos`](#-projetos) | [`💻 Tecnologias`](#-tecnologias) | [`📊 Métricas`](#-métricas-vivas) | [`📬 Contato`](#-contato-rápido) |
+Desenvolvedor full stack atuando desde 2020, com histórico de projetos próprios
+que vão do back-end ao desktop:
 
----
+- **Ferramentas de sistema para Linux** escritas em Python e Rust, integrando
+  hardware (DDC/CI, HID, Vulkan) com interfaces nativas.
+- **Automação e bots**: engines de WhatsApp, integrações com Telegram,
+  servidores de mídia e schedulers.
+- **IA aplicada**: pipelines self-hosted com Ollama, ComfyUI, TTS e
+  transcrição de voz, otimizados para hardware modesto (8 GB de VRAM).
+- **APIs e web**: REST em .NET, NestJS, Django, Node e Java; front-ends em
+  React e TypeScript.
 
-</div>
+Perfil de generalista hands-on: escolho a stack pelo problema, mantenho tudo
+versionado, documentado e rodando em produção própria.
 
-<!-- ============================================
-          🎯 SOBRE MIM - STATUS DO JOGADOR
-     ============================================ -->
+## Stack
 
-<div align="center">
+| Área | Tecnologias |
+|---|---|
+| Linguagens | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![Rust](https://img.shields.io/badge/-Rust-000000?style=flat-square&logo=rust) ![C#](https://img.shields.io/badge/-C%23-239120?style=flat-square&logo=csharp&logoColor=white) ![Java](https://img.shields.io/badge/-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) |
+| Back-end | Node.js · NestJS · Express · Django · .NET · Spring · Elixir/Phoenix |
+| Front-end | React · React Native · Next.js · HTML/CSS |
+| Dados | MongoDB · PostgreSQL · SQL Server · Redis |
+| Infra/DevOps | Docker · Docker Compose · Caddy · Nginx · GitHub Actions · tmux · Linux |
+| IA | Ollama · ComfyUI · Whisper · TTS (Qwen3) · OpenRouter · APIs de LLM |
 
-## 🎯 Sobre Mim
+## Projetos em destaque
 
-### ⚡ Status Atual: `ONLINE` ✅
+### Ferramentas Linux (ativos, 2026)
 
-```
-╔══════════════════════════════════════════════════════════╗
-║  NÍVEL:      Full Stack Developer                        ║
-║  ESPECIALIDADE: Back-End (Expert)                        ║
-║  OBJETIVO:    Criar soluções escaláveis e inovadoras     ║
-╚══════════════════════════════════════════════════════════╝
-```
+| Projeto | Descrição | Stack |
+|---|---|---|
+| [brightness-control](https://github.com/FrancosCorporation/brightness-control) | Controle de brilho para monitores externos via DDC/CI (hardware) e xrandr (software), com interface GTK3, live preview e debounce inteligente. | Python · GTK3 |
+| [ds4linux](https://github.com/FrancosCorporation/ds4linux) | Emulador de DualShock 4 para Linux: use o controle de PS4 como controle virtual Xbox/PS4, com editor de perfis estilo DS4Windows. | Python · uinput |
+| [FrancosVox](https://github.com/FrancosCorporation/FrancosVox) | Ditado por voz em português do Brasil para Linux, com GPU Vulkan, OSD visual e suporte ABNT2/Wayland. | Shell · Vulkan |
 
-### 🎓 Áreas de Conhecimento
+### IA e dados
 
-| Área | Status | Nível |
-|------|--------|-------|
-| Full Stack Development | 🟢 Ativo | Expert |
-| Machine Learning | 🟡 Em Estudo | Intermediate |
-| API Rest | 🟢 Ativo | Advanced |
-| Web Developer | 🟢 Ativo | Expert |
-| Front-End | 🟢 Ativo | Advanced |
-| Back-End (Especialista) | 🟢 Ativo | Master |
-| Deep Learning | 🔴 Futuro | Beginner |
+| Projeto | Descrição | Stack |
+|---|---|---|
+| HeartMula (privado) | Pipeline de IA generativa otimizado para GPUs de 8 GB de VRAM. | Python |
+| meu-qwen3-tts (privado) | Síntese de voz local com Qwen3 TTS. | Python |
+| binance_trade_bot_tester (privado) | Framework de testes/backtests para bots de trade na Binance — histórico de 300+ commits. | Python |
+| [api_django_vendas](https://github.com/FrancosCorporation/api_django_vendas) | API de vendas com autenticação, envio de e-mail e reCAPTCHA. | Python · Django |
+| [api_mongodb_query_money](https://github.com/FrancosCorporation/api_mongodb_query_money) | API de consultas monetárias sobre MongoDB. | Java · MongoDB |
 
-### 🌍 Idiomas
+### Web, APIs e produtos
 
-| Idioma | Nível |
-|--------|-------|
-| English | 🟡 Intermediate |
-| Português | 🟢 Native |
-| Español | 🟡 Basic |
+| Projeto | Descrição | Stack |
+|---|---|---|
+| doben_eccomerce_store | Loja e-commerce completa. | TypeScript |
+| recruiters-apllication-example | Aplicação de exemplo voltada a processos de recrutamento. | JavaScript |
+| [condominio_api](https://github.com/FrancosCorporation/condominio_api) | API REST de administração condominial. | C# · .NET |
+| [api_nest_run_container](https://github.com/FrancosCorporation/api_nest_run_container) | API NestJS pronta para rodar em container, com testes. | TypeScript · NestJS |
+| [api_loja_venda_app](https://github.com/FrancosCorporation/api_loja_venda_app) | API REST de loja/venda. | C# |
 
-</div>
+### Projetos corporativos (privados)
 
-<!-- ============================================
-         💻 TECNOLOGIAS - ARSENAL DO JOGADOR
-     ============================================ -->
+Trabalho atual em plataforma própria da empresa, mantido em repositórios privados:
 
-<div align="center">
+- **base_fundation** — plataforma self-hosted de IA multimídia: Ollama, ComfyUI,
+  transcrição de áudio, geração de voz/vídeo, rotação de perfis e orquestração
+  com Docker Compose + Caddy.
+- **site_corp** — monorepo corporativo: streaming de mídia (catálogo de
+  séries, qBittorrent/Prowlarr), motor de WhatsApp embutido (WAHA/Baileys),
+  bot de Telegram e front-ends de vendas.
+- **game_farma** — jogo 3D web de simulação de farmácia com avatares PBR e
+  pipeline de geração de assets via ComfyUI.
+- **desk_remote** — ferramenta de acesso remoto com autenticação e sessões.
+  Rust.
+- **media-server · code_server · whatssap_bot** — serviços internos de mídia,
+  ambiente de desenvolvimento Linux e automação de vendas por WhatsApp.
 
-## 💻 Tecnologias
+### Estudos e formação
 
-### 🎨 Linguagens de Programação
+| Projeto | Descrição |
+|---|---|
+| [projeto_integrador_analisador_csv](https://github.com/FrancosCorporation/projeto_integrador_analisador_csv) | Analisador de CSV — projeto integrador acadêmico. Java |
+| [chat_criptografado](https://github.com/FrancosCorporation/chat_criptografado) | Chat P2P com criptografia — estudo de segurança. Java |
+| [jogo_da_velha_ia](https://github.com/FrancosCorporation/jogo_da_velha_ia) | Jogo da velha com IA — estudo de algoritmos. Java |
+| NLW 5/6 (Rocketseat) | Bootcamps full stack: React, React Native, Next.js, Node. TypeScript/JS |
+| [wabanex](https://github.com/FrancosCorporation/wabanex) | Estudo de Elixir/Phoenix com testes. |
 
-```bash
-# Core Languages
-$ export LANGUAGES="JavaScript, TypeScript, C#, Dart, Python"
-
-# Backend Frameworks
-$ export BACKEND="Node.js, Java, .NET 5"
-
-# Mobile & Frontend
-$ export FRONTEND="React, Flutter"
-```
-
-<div align="center">
-
-| 🟦 JavaScript | 🟩 TypeScript | 🔴 C# | 🔵 Dart |
-|:------------:|:-------------:|:-----:|:-------:|
-| <img src="Icons/javaScript.png" alt="javascript" width="70" height="70"/> | <img src="Icons/typeScript.png" alt="typescript" width="70" height="70"/> | <img src="Icons/c.png" alt="c#" width="60" height="60"/> | <img src="Icons/dart.png" alt="dart" width="60" height="60"/> |
-
-</div>
-
-<div align="center">
-
-| 🟩 Node.js | 🐍 Python | 🎨 Flutter | ☕ Java |
-|:----------:|:---------:|:----------:|:------:|
-| <img src="Icons/node.png" alt="nodejs" width="70" height="70"/> | <img src="Icons/python.png" alt="python" width="70" height="70"/> | <img src="Icons/flutter.png" alt="Flutter" width="70" height="70"/> | <img src="Icons/java.png" alt="java" width="70" height="70"/> |
-
-</div>
-
-<div align="center">
-
-| 🌐 .NET 5 | ⚛️ React | 💻 VSCode | 📝 Notepad++ |
-|:---------:|:--------:|:---------:|:------------:|
-| <img src="Icons/net.png" alt=".net 5" width="70" height="70"/> | <img src="Icons/react.png" alt="react" width="70" height="70"/> | <img src="Icons/vscode.png" alt="VsCode" width="70" height="70"/> | <img src="Icons/notepad++.png" alt="Notepad ++" width="70" height="70"/> |
-
-</div>
-
-### 📦 Stack Completo
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│  FRONTEND           │  BACKEND          │  MOBILE           │
-│  ───────────────────┼───────────────────┼───────────────────┤
-│  React              │  Node.js          │  Flutter          │
-│  TypeScript         │  Java             │                   │
-│  JavaScript         │  .NET 5           │                   │
-│                      │  Python          │                   │
-│                      │  C#               │                   │
-└─────────────────────────────────────────────────────────────┘
-```
-
-</div>
-
-<!-- ============================================
-        🔧 PROJETOS - MISSÕES COMPLETADAS
-     ============================================ -->
+## Estatísticas
 
 <div align="center">
 
-## 🔧 Projetos
+![Stats](https://github-readme-stats.vercel.app/api?username=FrancosCorporation&show_icons=true&count_private=true&locale=pt-br&theme=dark&hide_border=true)
 
-### 📂 Navegador de Projetos
+![Linguagens](https://github-readme-stats.vercel.app/api/top-langs/?username=FrancosCorporation&layout=compact&count_private=true&locale=pt-br&theme=dark&hide_border=true)
 
-| Projeto | Status | Linguagens | Complexidade |
-|---------|--------|------------|--------------|
-| [`🤖 Padrão.ai`](Icons/Projects/padrão.ai) | 🟢 Ativo | AI/ML | ⭐⭐⭐⭐⭐ |
-| ... | ... | ... | ... |
-
-### ➕ Adicionar Novo Projeto
-
-```bash
-# Template para novos projetos:
-# 1. Crie pasta em Icons/Projects/
-# 2. Adicione ícone representativo
-# 3. Atualize tabela acima com:
-#    - Nome do projeto
-#    - Link (href)
-#    - Status (🟢 Ativo | 🟡 Em Desenvolvimento | 🔴 Abandonado)
-```
+![Streak](https://streak-stats.demolab.com?user=FrancosCorporation&theme=dark&hide_border=true&locale=pt-br)
 
 </div>
 
-<!-- ============================================
-       📊 MÉTRICAS VIVAS - DASHBOARD DE PERFORMANCE
-     ============================================ -->
+## Em inglês / English
 
-<div align="center">
+Full stack developer since 2020. I build end-to-end software: Linux system
+tools (Python, Rust), WhatsApp/Telegram automation engines, self-hosted AI
+pipelines (Ollama, ComfyUI, speech-to-text, TTS) and REST APIs
+(.NET, NestJS, Django, Node, Java). Currently open to new opportunities.
 
-## 📊 Métricas Vivas
+## Contato
 
-### 🎯 Objetivos Anuais
-
-| Objetivo | Status | Progresso |
-|----------|--------|-----------|
-| Get knowledge | ✅ Concluído | 100% |
-| Create a great portfolio | ✅ Concluído | 100% |
-| Have fun working on personal projects | ✅ Concluído | 100% |
-| Get a new job with coder | ⏳ Em Progresso | 75% |
-
-```
-╔══════════════════════════════════════════════════════════╗
-║  🎯 ANO: 2026                                            ║
-║  📈 PROGRESSO GERAL: ████████████░░░░ 80%               ║
-║  ⏳ PRÓXIMO OBJETIVO: Get a new job with coder           ║
-╚══════════════════════════════════════════════════════════╝
-```
-
-### 📈 Métricas do Repositório
-
-| Métrica | Valor | Status |
-|---------|-------|--------|
-| ⭐ Stars | **Ver no GitHub** | Atualizado semanalmente |
-| 🔀 Forks | **Ver no GitHub** | Atualizado semanalmente |
-| 👁️ Watchers | **Ver no GitHub** | Atualizado semanalmente |
-| 📝 Commits (30d) | **Ver no GitHub** | Atualizado diariamente |
-
-### 🔄 Atualização Automática
-
-Este README é alimentado por:
-
-- ✅ GitHub Actions (workflow de atualização)
-- ✅ github-readme-stats (stats visuais)
-- ✅ Scripts personalizados de automação
-
-</div>
-
-<!-- ============================================
-         📬 CONTATO RÁPIDO - CANAIS DE COMUNICAÇÃO
-     ============================================ -->
-
-<div align="center">
-
-## 📬 Contato Rápido
-
-### 🔗 Links Diretos
-
-```bash
-# Email
-$ mailto:rodolfofranco14@hotmail.com
-
-# WhatsApp
-$ whatsapp://send?phone=5562985835588
-
-# LinkedIn
-$ https://www.linkedin.com/in/rodolfo-franco-26225549/
-```
-
-<div align="center">
-
-| 📧 Email | 💬 WhatsApp | 🔗 LinkedIn |
-|:--------:|:-----------:|:-----------:|
-| <a href="mailto:rodolfofranco14@hotmail.com"><img src="Icons/email.png" alt="Hotmail Link" width="50" height="50"/></a> | <a href="https://api.whatsapp.com/send?phone=5562985835588"><img src="Icons/whatsApp.png" alt="WhatsApp Link" width="50" height="50"/></a> | <a href="https://www.linkedin.com/in/rodolfo-franco-26225549/"><img src="Icons/linkedin.png" alt="LinkedIn Link" width="50" height="50"/></a> |
-
-</div>
-
-### 📱 QR Codes (Opcional)
-
-```
-┌─────────────────────────────────────────┐
-│  Escaneie para conectar:                 │
-│                                         │
-│  [📧 Email]    [💬 WhatsApp]            │
-│                                         │
-└─────────────────────────────────────────┘
-```
-
-</div>
-
-<!-- ============================================
-         🛠️ COMO CONTRIBUIR - COLABORADORES
-     ============================================ -->
-
-<div align="center">
-
-## 🛠️ Como Contribuir
-
-### 📝 Contribuições Bem-vindas!
-
-| Tipo | Descrição | Status |
-|------|-----------|--------|
-| 🐛 Bug Reports | Reportar problemas encontrados | Aberto |
-| 💡 Feature Requests | Sugerir novas funcionalidades | Aberto |
-| 🔧 Pull Requests | Enviar melhorias de código | Bem-vindo |
-| 📚 Documentation | Melhorar a documentação | Bem-vindo |
-
-### ⭐ Suporte ao Projeto
-
-Se este projeto te ajudou, considere:
-
-- ⭐ **Star** este repositório
-- 💬 **Discussão** - Participe das discussões
-- 🔗 **Share** - Compartilhe com colegas
-
-</div>
-
-<!-- ============================================
-          📜 LICENÇA E RODAPÉ
-     ============================================ -->
-
-<div align="center">
-
-## 📜 Licença
-
-```
-MIT License
-
-Copyright (c) 2026 Rodolfo Franco
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software.
-```
+- E-mail: [rodolfofranco14@hotmail.com](mailto:rodolfofranco14@hotmail.com)
+- LinkedIn: [rodolfo-franco](https://www.linkedin.com/in/rodolfo-franco-26225549/)
+- WhatsApp: [+55 62 98585-5588](https://api.whatsapp.com/send?phone=5562985835588)
 
 ---
 
 <div align="center">
 
-### 🎮 FRANCOS CORPORATION © 2026
-
-> *"Code is poetry. Commit to excellence."*
-
-</div>
-
-<!-- ============================================
-         🔧 CONFIGURAÇÕES DE AUTOMAÇÃO
-     ============================================ -->
-
-<div align="center" style="opacity: 0.7; font-size: 12px;">
-
-### ⚙️ Este README é alimentado por:
-
-- GitHub Actions (workflow de atualização)
-- github-readme-stats (opcional)
-- Scripts personalizados de automação
-
-**Workflows disponíveis:**
-- [`update-readme.yml`](.github/workflows/update-readme.yml) - Atualiza métricas e commits
-- [`readme-stats.yml`](.github/workflows/readme-stats.yml) - Gera stats visuais
-
-**Documentação adicional:**
-- [`.github/README-STATS.md`](.github/README-STATS.md) - Integração de stats detalhada
-- [`.github/CONTRIBUTING.md`](.github/CONTRIBUTING.md) - Guia de contribuição
-- [`.github/USO-README.md`](.github/USO-README.md) - Guia completo de uso
+**FrancosCorporation** — construindo sonhos e mudando o mundo através da programação.
 
 </div>
