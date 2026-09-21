@@ -11,7 +11,7 @@ bots, pipelines de IA e aplicações web.
 
 `Aberto a oportunidades` — remoto ou Goiânia/GO, Brasil
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-rodolfo--franco-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rodolfo-franco-26225549/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-francoscorp-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/francoscorp/)
 [![E-mail](https://img.shields.io/badge/E--mail-rodolfofranco14-0078D4?style=for-the-badge&logo=maildotru&logoColor=white)](mailto:rodolfofranco14@hotmail.com)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-%2B55\_62\_98585--5588-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://api.whatsapp.com/send?phone=5562985835588)
 
@@ -126,7 +126,7 @@ pipelines (Ollama, ComfyUI, speech-to-text, TTS) and REST APIs
 ## Contato
 
 - E-mail: [rodolfofranco14@hotmail.com](mailto:rodolfofranco14@hotmail.com)
-- LinkedIn: [rodolfo-franco](https://www.linkedin.com/in/rodolfo-franco-26225549/)
+- LinkedIn: [francoscorp](https://www.linkedin.com/in/francoscorp/)
 - WhatsApp: [+55 62 98585-5588](https://api.whatsapp.com/send?phone=5562985835588)
 
 ---
