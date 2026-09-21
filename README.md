@@ -104,6 +104,17 @@ Trabalho atual em plataforma própria da empresa, mantido em repositórios priva
 | NLW 5/6 (Rocketseat) | Bootcamps full stack: React, React Native, Next.js, Node. TypeScript/JS |
 | [wabanex](https://github.com/FrancosCorporation/wabanex) | Estudo de Elixir/Phoenix com testes. |
 
+## Jogue no navegador
+
+### Repo Racer — explore meus repositórios em 3D
+
+Dirija por uma cidade neon e visite cada projeto: pare na praça iluminada e
+pressione **E** para abrir o repositório no GitHub.
+
+[![Repo Racer](https://raw.githubusercontent.com/FrancosCorporation/repo-racer/main/preview.png)](https://francoscorporation.github.io/repo-racer/)
+
+[**Jogar agora**](https://francoscorporation.github.io/repo-racer/) · [código-fonte](https://github.com/FrancosCorporation/repo-racer)
+
 ## Estatísticas
 
 <div align="center">
