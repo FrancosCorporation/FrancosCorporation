@@ -108,10 +108,12 @@ Trabalho atual em plataforma própria da empresa, mantido em repositórios priva
 
 ### Repo Racer — explore meus repositórios em 3D
 
-Dirija por uma cidade neon e visite cada projeto: pare na praça iluminada e
-pressione **E** para abrir o repositório no GitHub.
+Dirija por uma cidade neon, escolha entre 3 carros, use nitro, desvie do
+trânsito e pule de rampas — cada praça iluminada é um projeto: pare em cima e
+pressione **E** para abrir o repositório no GitHub. Tem som de motor, minimapa
+e cronômetro com recorde.
 
-[![Repo Racer](https://raw.githubusercontent.com/FrancosCorporation/repo-racer/main/preview.png)](https://francoscorporation.github.io/repo-racer/)
+[![Repo Racer](https://raw.githubusercontent.com/FrancosCorporation/repo-racer/main/preview.png?v=2)](https://francoscorporation.github.io/repo-racer/)
 
 [**Jogar agora**](https://francoscorporation.github.io/repo-racer/) · [código-fonte](https://github.com/FrancosCorporation/repo-racer)
 
