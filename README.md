@@ -110,6 +110,22 @@ Trabalho atual em plataforma própria da empresa, mantido em repositórios priva
 | NLW 5/6 (Rocketseat) | Bootcamps full stack: React, React Native, Next.js, Node. TypeScript/JS |
 | [wabanex](https://github.com/FrancosCorporation/wabanex) | Estudo de Elixir/Phoenix com testes. |
 
+### Jogos com IA 100% local (WebGPU)
+
+| Projeto | Jogar | Descrição |
+|---|---|---|
+| [Jogo da Velha](https://github.com/FrancosCorporation/jogo_da_velha_ia) | [Abrir jogo](https://francoscorporation.github.io/jogo_da_velha_ia/) | Jogo da velha com IA heurística + minimax imbatível, modo LLM Qwen2.5-0.5B local |
+| [Xadrez](https://github.com/FrancosCorporation/xadrez_ia) | [Abrir jogo](https://francoscorporation.github.io/xadrez_ia/) | Xadrez com quiescence search, PSTs, roque completo, modo LLM local |
+| [Damas](https://github.com/FrancosCorporation/damas_ia) | [Abrir jogo](https://francoscorporation.github.io/damas_ia/) | Damas brasileira (captura obrigatória, dama voadora), modo LLM local |
+| [Lig 4](https://github.com/FrancosCorporation/lig4_ia) | [Abrir jogo](https://francoscorporation.github.io/lig4_ia/) | Conecta 4 com avaliação por janelas, modo LLM local |
+| [Futebol de Botão](https://github.com/FrancosCorporation/botao_ia) | [Abrir jogo](https://francoscorporation.github.io/botao_ia/) | Futebol de botão com física própria, modo LLM local |
+
+Todos os jogos incluem:
+- **Modo LLM 100% local**: WebLLM/WebGPU embutido, modelo Qwen2.5-0.5B (~350MB, baixado uma vez)
+- **Para escolher entre candidatos avaliados** pela IA clássica com explicação em português
+- **Fallback automático** se a LLM falhar (jogo sempre funciona)
+- **Testes automatizados**: cada repositório descreve sua suíte; consulte os projetos e as páginas de automação em [REDMI.md](REDMI.md).
+
 ## Jogue no navegador
 
 ### Repo Racer — explore meus repositórios em 3D
@@ -155,3 +171,5 @@ pipelines (Ollama, ComfyUI, speech-to-text, TTS) and REST APIs
 **FrancosCorporation** — construindo sonhos e mudando o mundo através da programação.
 
 </div>
+
+> Última revisão do inventário de links externos: 2026-10-11. Repositórios foram conferidos; a disponibilidade das páginas e destinos externos é acompanhada pelo workflow de links.

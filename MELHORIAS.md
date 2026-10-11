@@ -3,6 +3,13 @@
 > **Gerado por análise de código em 2026-10-05** · branch `main` · repositório de perfil/organização **sem código-fonte** (apenas documentação)
 > Fatos verificados por leitura direta do repositório (`git ls-files`, `wc -l`, inspeção dos arquivos). Nenhum arquivo:linha foi inventado.
 
+## Estado da execução — 2026-10-11
+
+- `DOC-01`, `DOC-02`, `IMP-01` e `SEC-01` implementados, incluindo a preservação e atualização da nova seção de jogos que já estava no README e o versionamento do `REDMI.md` preexistente.
+- As contagens de testes foram retiradas do catálogo; cada jogo agora aponta para a aba GitHub Actions do repositório.
+- `DEVOPS-01`: markdownlint e link-check configurados com permissão `contents: read`; não executei a CI nesta sessão.
+- Links GitHub revisados; as páginas publicadas foram adicionadas ao link-check. Não afirmo que estão acessíveis antes da execução desse workflow.
+
 ## 0. Como usar este documento
 
 - Cada item tem 6 campos: **Arquivo:**, **Evidência:**, **Impacto:**, **Mudança:**, **Aceite:** e **Verificação:** (com bloco `bash`).
@@ -13,15 +20,15 @@
 ## 1. Diagnóstico executivo
 
 **O que está bem:**
-- `README.md` (173 linhas) é profissional e completo: stack em tabela com badges, projetos em destaque (Linux, IA/dados, jogos com IA local, Repo Racer), estatísticas via cards e seção em inglês.
+- `README.md` é profissional e completo: stack em tabela com badges, projetos em destaque (Linux, IA/dados, jogos com IA local, Repo Racer), estatísticas via cards e seção em inglês.
 - Licença MIT presente (`LICENSE`, 21 linhas).
-- `REDMI.md` (17 linhas) organiza os 5 jogos com IA local em tabela com links GitHub + GitHub Pages + contagem de testes.
+- `REDMI.md` organiza os 5 jogos com IA local em tabela com links GitHub, GitHub Pages e abas GitHub Actions.
 
 **O que está quebrado / ausente:**
-- `REDMI.md` **não está rastreado pelo git** (`git status --porcelain` mostra `?? REDMI.md`) — existe no disco mas não versionado; `README.md` está com alterações não commitadas (`M README.md`).
+- `REDMI.md` estava sem rastreamento e `README.md` tinha a nova seção de jogos ainda não commitada; ambos são alterações preexistentes desta sessão e foram preservados.
 - Sem `.gitignore` (ls confirma apenas 3 arquivos no diretório).
 - Sem CI (`.github/` inexistente — verificado por `ls`).
-- Contagens de testes no `REDMI.md` (ex.: `35/35`) são números "congelados" sem data de validação.
+- As contagens de testes no `REDMI.md` eram números "congelados" sem data de validação.
 - Sem registro de quando os links externos do README foram revisados pela última vez.
 
 ## 2. Tabela de prioridades
@@ -78,11 +85,11 @@ test -f .github/workflows/lint.yml && echo "OK: workflow de lint presente"
 **Arquivo:** `REDMI.md`
 **Evidência:** `REDMI.md` tem 17 linhas; a tabela (linhas 5–11) lista contagens congeladas: `20/20`, `35/35`, `37/37`, `35/35`, `47/47`. `README.md:127` declara "174 testes ao todo, zero falhas" (soma atual confere: 20+35+37+35+47=174), mas nenhum dos dois arquivos registra data de validação — e o arquivo não está versionado (`?? REDMI.md`).
 **Impacto:** Médio. Os números podem divergir dos reais nos repos dos jogos sem que ninguém perceba, gerando informação errada em um artefato de perfil.
-**Mudança:** Adicionar abaixo da tabela do `REDMI.md` uma linha "Última validação: AAAA-MM-DD (fonte: CI/suite dos repos X)", ou remover a coluna "Testes" e linkar o badge/CI de cada repo.
-**Aceite:** Tabela do `REDMI.md` com data de validação explícita e arquivo rastreado pelo git.
+**Mudança:** Remover a coluna com contagens históricas e incluir links às abas GitHub Actions de cada repositório, além de uma nota datada sobre o catálogo.
+**Aceite:** A tabela do `REDMI.md` não replica contagens de testes, aponta para as abas Actions e o arquivo fica rastreado pelo git.
 **Verificação:**
 ```bash
-grep -q "Última validação" REDMI.md && echo "OK: data de validação presente"; git ls-files --error-unmatch REDMI.md >/dev/null 2>&1 && echo "OK: REDMI.md versionado"
+! rg -q '\b[0-9]+/[0-9]+\b' REDMI.md && test "$(rg -o 'github\.com/FrancosCorporation/[^ )]+/actions' REDMI.md | wc -l)" -eq 5 && echo "OK: sem contagens fixas e com cinco links Actions"; git ls-files --error-unmatch REDMI.md >/dev/null 2>&1 && echo "OK: REDMI.md versionado após o commit"
 ```
 
 ### DOC-02 [P2] — Sem .gitignore em repo só-docs
@@ -111,24 +118,24 @@ grep -qi "última revisão" README.md && echo "OK: data de revisão de links pre
 
 ## 8. Ordem de execução (waves)
 
-**Wave 1 (rápida, 10 min):** DOC-02 (criar `.gitignore`) · versionar `REDMI.md` e commitar as mudanças pendentes de `README.md` (estado `M`/`??` verificado via `git status`).
-**Wave 2 (curta):** DOC-01 (data de validação no `REDMI.md`) · IMP-01 (data de revisão no README).
-**Wave 3 (opcional):** SEC-01 (`SECURITY.md`) · DEVOPS-01 (workflow de lint/link-check).
+**Wave 1 (rápida):** DOC-02 (`.gitignore`) · versionar as mudanças preexistentes em `REDMI.md` e `README.md`. **Concluída.**
+**Wave 2 (curta):** DOC-01 (trocar contagens fixas por links às abas Actions) · IMP-01 (data de revisão no README). **Concluída.**
+**Wave 3 (opcional):** SEC-01 (`SECURITY.md`) · DEVOPS-01 (workflow de lint/link-check). **Implementada; CI não executada.**
 
 ## 9. Fora de escopo / riscos
 
 - Não há código-fonte neste repo — itens de testes, performance, A11Y de código e bugs funcionais não se aplicam (§4 e §5 vazias por construção).
 - Não inventar arquivos:linha de repositórios externos (jogos, ferramentas) — a análise cobre apenas o que está neste diretório.
-- Risco: tratar as contagens de testes do `REDMI.md` como autoridade sem validação periódica.
+- As suítes e automações podem mudar; o catálogo aponta para a aba Actions de cada jogo em vez de copiar números de execuções anteriores.
 - Risco: badges de terceiros (`img.shields.io`, `streak-stats`, `github-profile-summary-cards`) podem mudar de formato sem aviso.
 
 ## 10. Definição de pronto (DoD)
 
-- [ ] `.gitignore` criado com regras de sistema (DOC-02).
-- [ ] `REDMI.md` rastreado pelo git e com data de validação (DOC-01).
-- [ ] `README.md` com data da última revisão de links externos (IMP-01).
-- [ ] `SECURITY.md` presente ou decisão de ausência registrada (SEC-01).
-- [ ] Workflow de markdownlint/link-check passando no estado atual (DEVOPS-01).
-- [ ] `python3 /tmp/validate.py FrancosCorporation` retorna OK.
+- [x] `.gitignore` criado com regras de sistema (DOC-02).
+- [x] `REDMI.md` rastreado, sem contagens fixas e com links às abas Actions por projeto (DOC-01).
+- [x] `README.md` com data da revisão do inventário de links externos (IMP-01).
+- [x] `SECURITY.md` descreve escopo e contato para relatos (SEC-01).
+- [x] Workflow de markdownlint/link-check configurado em `push` e `pull_request` para `main` (DEVOPS-01).
+- [ ] CI e `python3 /tmp/validate.py FrancosCorporation` não foram executados nesta sessão.
 
 *Fim do plano. Gerado por leitura direta do código em 2026-10-05 — todos os fatos (arquivos, linhas, estados de git) foram verificados no repositório; nenhum arquivo:linha foi inventado.*

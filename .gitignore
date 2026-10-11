@@ -1,0 +1,12 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporários de editores
+*.swp
+*.swo
+*~
+*.tmp
+.idea/
+.vscode/

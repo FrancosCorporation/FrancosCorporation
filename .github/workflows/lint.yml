@@ -1,0 +1,35 @@
+name: Documentação
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - name: Validar Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v24.2.0
+        with:
+          globs: |
+            README.md
+            REDMI.md
+            SECURITY.md
+
+      - name: Conferir links externos e internos
+        uses: lycheeverse/lychee-action@v2.9.0
+        with:
+          args: >-
+            --verbose --no-progress
+            --exclude '^https://img\.shields\.io/'
+            --exclude '^https://github-profile-summary-cards\.vercel\.app/'
+            --exclude '^https://streak-stats\.demolab\.com/'
+            --exclude '^https://www\.linkedin\.com/'
+            README.md REDMI.md SECURITY.md
