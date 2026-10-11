@@ -104,7 +104,7 @@ Trabalho atual em plataforma própria da empresa, mantido em repositórios priva
 | [chat_criptografado](https://github.com/FrancosCorporation/chat_criptografado) | Chat P2P com criptografia — estudo de segurança. Java |
 | [jogo_da_velha_ia](https://github.com/FrancosCorporation/jogo_da_velha_ia) | Jogo da velha com IA — estudo de algoritmos. Java |
 | NLW 5/6 (Rocketseat) | Bootcamps full stack: React, React Native, Next.js, Node. TypeScript/JS |
-| [wabanex](https://github.com/FrancosCorporation/wabanex) | Estudo de Elixir/Phoenix com testes. |
+| wabanex (privado) | Estudo de Elixir/Phoenix com testes. |
 
 ### Jogos com IA 100% local (WebGPU)
 
