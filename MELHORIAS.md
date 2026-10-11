@@ -7,7 +7,7 @@
 
 - `DOC-01`, `DOC-02`, `DOC-03`, `IMP-01` e `SEC-01` implementados, incluindo a preservação e atualização da nova seção de jogos que já estava no README e o versionamento do `REDMI.md` preexistente.
 - As contagens de testes foram retiradas do catálogo; cada jogo agora aponta para a aba GitHub Actions do repositório.
-- `DEVOPS-01`: markdownlint e link-check configurados com permissão `contents: read`; a execução remota `38164094232` passou no commit `cb18a09`.
+- `DEVOPS-01`: markdownlint e link-check configurados com permissão `contents: read`; a execução remota `38169778934` passou no commit `64bd39a`, incluindo os dois links novos.
 - Links GitHub revisados; as páginas publicadas foram adicionadas ao link-check. Não afirmo que estão acessíveis antes da execução desse workflow.
 - Corrigido o stack de `api_mongodb_query_money` para Node.js/MongoDB e vinculados os dois projetos públicos que estavam sem link no catálogo.
 
@@ -147,7 +147,7 @@ grep -qi "última revisão" README.md && echo "OK: data de revisão de links pre
 - [x] `README.md` com data da revisão do inventário de links externos (IMP-01).
 - [x] `SECURITY.md` descreve escopo e contato para relatos (SEC-01).
 - [x] Workflow de markdownlint/link-check configurado em `push` e `pull_request` para `main` (DEVOPS-01).
-- [x] CI de markdownlint/link-check passou no commit `cb18a09` (execução `38164094232`).
+- [x] CI de markdownlint/link-check passou no commit `64bd39a` (execução `38169778934`).
 - [ ] `python3 /tmp/validate.py FrancosCorporation` não foi executado; não executei testes.
 
 *Fim do plano. Gerado por leitura direta do código em 2026-10-05 — todos os fatos (arquivos, linhas, estados de git) foram verificados no repositório; nenhum arquivo:linha foi inventado.*
