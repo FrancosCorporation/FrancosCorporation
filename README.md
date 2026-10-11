@@ -67,14 +67,14 @@ versionado, documentado e rodando em produção própria.
 | meu-qwen3-tts (privado) | Síntese de voz local com Qwen3 TTS. | Python |
 | binance_trade_bot_tester (privado) | Framework de testes/backtests para bots de trade na Binance — histórico de 300+ commits. | Python |
 | [api_django_vendas](https://github.com/FrancosCorporation/api_django_vendas) | API de vendas com autenticação, envio de e-mail e reCAPTCHA. | Python · Django |
-| [api_mongodb_query_money](https://github.com/FrancosCorporation/api_mongodb_query_money) | API de consultas monetárias sobre MongoDB. | Java · MongoDB |
+| [api_mongodb_query_money](https://github.com/FrancosCorporation/api_mongodb_query_money) | API de consultas monetárias sobre MongoDB. | Node.js · MongoDB |
 
 ### Web, APIs e produtos
 
 | Projeto | Descrição | Stack |
 | --- | --- | --- |
-| doben_eccomerce_store | Loja e-commerce completa. | TypeScript |
-| recruiters-apllication-example | Aplicação de exemplo voltada a processos de recrutamento. | JavaScript |
+| [doben_eccomerce_store](https://github.com/FrancosCorporation/doben_eccomerce_store) | Loja e-commerce completa. | TypeScript |
+| [recruiters-apllication-example](https://github.com/FrancosCorporation/recruiters-apllication-example) | Aplicação de exemplo voltada a processos de recrutamento. | JavaScript |
 | [condominio_api](https://github.com/FrancosCorporation/condominio_api) | API REST de administração condominial. | C# · .NET |
 | [api_nest_run_container](https://github.com/FrancosCorporation/api_nest_run_container) | API NestJS pronta para rodar em container, com testes. | TypeScript · NestJS |
 | [api_loja_venda_app](https://github.com/FrancosCorporation/api_loja_venda_app) | API REST de loja/venda. | C# |

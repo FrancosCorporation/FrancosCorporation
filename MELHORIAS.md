@@ -5,10 +5,11 @@
 
 ## Estado da execução — 2026-10-11
 
-- `DOC-01`, `DOC-02`, `IMP-01` e `SEC-01` implementados, incluindo a preservação e atualização da nova seção de jogos que já estava no README e o versionamento do `REDMI.md` preexistente.
+- `DOC-01`, `DOC-02`, `DOC-03`, `IMP-01` e `SEC-01` implementados, incluindo a preservação e atualização da nova seção de jogos que já estava no README e o versionamento do `REDMI.md` preexistente.
 - As contagens de testes foram retiradas do catálogo; cada jogo agora aponta para a aba GitHub Actions do repositório.
-- `DEVOPS-01`: markdownlint e link-check configurados com permissão `contents: read`; não executei a CI nesta sessão.
+- `DEVOPS-01`: markdownlint e link-check configurados com permissão `contents: read`; a execução remota `38164094232` passou no commit `cb18a09`.
 - Links GitHub revisados; as páginas publicadas foram adicionadas ao link-check. Não afirmo que estão acessíveis antes da execução desse workflow.
+- Corrigido o stack de `api_mongodb_query_money` para Node.js/MongoDB e vinculados os dois projetos públicos que estavam sem link no catálogo.
 
 ## 0. Como usar este documento
 
@@ -37,6 +38,7 @@
 |---|---|---|---|
 | DOC-01 | P2 | `REDMI.md` | Contagens de testes podem desatualizar — adicionar data/validação |
 | DOC-02 | P2 | `.gitignore` (ausente) | Sem `.gitignore` em repo só-docs (lixo de sistema) |
+| DOC-03 | P2 | `README.md` | Stack de API desatualizada e dois projetos públicos sem link |
 | DEVOPS-01 | P3 | `.github/workflows/` (ausente) | Sem CI; markdownlint/link-check mínimo |
 | SEC-01 | P3 | `SECURITY.md` (ausente) | Sem SECURITY.md — aceitável em repo de perfil; registrar decisão |
 | IMP-01 | P3 | `README.md` | Sem data da última revisão de links externos |
@@ -116,6 +118,15 @@ test -f .gitignore && grep -q ".DS_Store" .gitignore && echo "OK: .gitignore pre
 grep -qi "última revisão" README.md && echo "OK: data de revisão de links presente no README"
 ```
 
+### DOC-03 [P2] — Catálogo com stack incorreta e projetos públicos sem link
+
+**Arquivo:** `README.md`, tabela "Web, APIs e produtos".
+**Evidência:** o projeto `api_mongodb_query_money` documenta sua implementação ativa como Node.js/Express/Mongoose, mas o perfil a listava como Java; `doben_eccomerce_store` e `recruiters-apllication-example` são repositórios públicos, porém apareciam como texto sem link.
+**Impacto:** visitantes recebem uma informação errada sobre a stack e não conseguem abrir dois projetos públicos diretamente pelo perfil.
+**Mudança:** corrigir o stack para Node.js/MongoDB e adicionar os links GitHub dos dois repositórios.
+**Aceite:** a tabela reflete a stack ativa e os três nomes abrem os repositórios correspondentes.
+**Verificação:** revisar a linha do README e a execução do link-check do workflow.
+
 ## 8. Ordem de execução (waves)
 
 **Wave 1 (rápida):** DOC-02 (`.gitignore`) · versionar as mudanças preexistentes em `REDMI.md` e `README.md`. **Concluída.**
@@ -136,6 +147,7 @@ grep -qi "última revisão" README.md && echo "OK: data de revisão de links pre
 - [x] `README.md` com data da revisão do inventário de links externos (IMP-01).
 - [x] `SECURITY.md` descreve escopo e contato para relatos (SEC-01).
 - [x] Workflow de markdownlint/link-check configurado em `push` e `pull_request` para `main` (DEVOPS-01).
-- [ ] CI e `python3 /tmp/validate.py FrancosCorporation` não foram executados nesta sessão.
+- [x] CI de markdownlint/link-check passou no commit `cb18a09` (execução `38164094232`).
+- [ ] `python3 /tmp/validate.py FrancosCorporation` não foi executado; não executei testes.
 
 *Fim do plano. Gerado por leitura direta do código em 2026-10-05 — todos os fatos (arquivos, linhas, estados de git) foram verificados no repositório; nenhum arquivo:linha foi inventado.*
